@@ -1,0 +1,10 @@
+#spring.application.name=cuiapi-interface
+
+server:
+  port: 8123
+  servlet:
+    context-path: /api
+cuiapi:
+  client:
+    access-key: ziyu
+    secret-key: abcdefgh
