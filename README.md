@@ -20,6 +20,9 @@
 # 克隆仓库
 git clone https://github.com/Cui-zi/cuiapi.git
 
+##前端初始化
+
+```bash
 # 进入前端项目目录
 cd cuiapi-backend
 
