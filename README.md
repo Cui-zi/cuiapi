@@ -6,7 +6,6 @@
 
 - [项目简介](#项目简介)
 - [安装](#安装)
-- [使用方法](#使用方法)
 - [功能](#功能)
 
 ## 项目简介
@@ -19,10 +18,10 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/yourproject.git
+git clone https://github.com/Cui-zi/cuiapi.git
 
-# 进入项目目录
-cd yourproject
+# 进入前端项目目录
+cd cuiapi-backend
 
 # 安装依赖
 npm install
