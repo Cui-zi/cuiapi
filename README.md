@@ -19,12 +19,17 @@
 ```bash
 # 克隆仓库
 git clone https://github.com/Cui-zi/cuiapi.git
+```
 
-## **前端初始化**
+## 前端初始化
 
 ```bash
-# 进入前端项目目录
+#进入前端项目目录
 cd cuiapi-backend
 
-# 安装依赖
+#安装依赖
 npm install
+
+#安装完毕后
+npm run start
+```
