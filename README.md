@@ -24,7 +24,7 @@ git clone https://github.com/Cui-zi/cuiapi.git
 ## 前端初始化
 
 ```bash
-#进入前端项目目录
+#打开控制台，进入前端项目目录
 cd cuiapi-backend
 
 #安装依赖
@@ -33,3 +33,8 @@ npm install
 #安装完毕后
 npm run start
 ```
+
+## 后端初始化
+
+后端项目需要先自行下载redis与nacos
+
