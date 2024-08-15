@@ -5,6 +5,7 @@ import type { RunTimeLayoutConfig } from '@umijs/max';
 import { history, Link } from '@umijs/max';
 import { requestConfig } from './requestConfig';
 import {getLoginUserUsingGet} from "@/services/cuiapi-backend/userController";
+import defaultSettings from "../config/defaultSettings";
 const isDev = process.env.NODE_ENV === 'development';
 const loginPath = '/user/login';
 
@@ -22,7 +23,7 @@ export async function getInitialState(): Promise<InitialState> {
         state.loginUser = res.data;
       }
     } catch (error) {
-      history.push(loginPath);
+      //history.push(loginPath);
     }
   return state;
 }
@@ -42,10 +43,16 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       content: initialState?.loginUser?.userName,
     },
     footerRender: () => <Footer />,
+
     onPageChange: () => {
+
       const { location } = history;
+      const whilelist = ['/user/register', loginPath];
+      if (whilelist.includes(location.pathname)) {
+        return;
+      }
       // 如果没有登录，重定向到 login
-      if (!initialState?.loginUser && location.pathname !== loginPath) {
+      if (!initialState?.loginUser) {
         history.push(loginPath);
       }
     },
@@ -90,7 +97,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
             <SettingDrawer
               disableUrlParams
               enableDarkTheme
-              settings={initialState?.settings}
+              settings={defaultSettings}
               onSettingChange={(settings) => {
                 setInitialState((preInitialState) => ({
                   ...preInitialState,

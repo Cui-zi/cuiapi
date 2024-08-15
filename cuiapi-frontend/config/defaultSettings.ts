@@ -15,9 +15,9 @@ const Settings: ProLayoutProps & {
   fixedHeader: false,
   fixSiderbar: true,
   colorWeak: false,
-  title: 'Ant Design Pro',
+  title: '云桥API开放平台',
   pwa: true,
-  logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
+  logo: 'https://himg.bdimg.com/sys/portrait/item/public.1.82d0a505.hd1F2_fxqGv1nPtIozr6cQ?tt=1723650134620',
   iconfontUrl: '',
   token: {
     // 参见ts声明，demo 见文档，通过token 修改样式
@@ -26,3 +26,6 @@ const Settings: ProLayoutProps & {
 };
 
 export default Settings;
+
+//个人图标https://himg.bdimg.com/sys/portrait/item/public.1.82d0a505.hd1F2_fxqGv1nPtIozr6cQ?tt=1723650134620
+//蚂蚁金服自带的图标https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg

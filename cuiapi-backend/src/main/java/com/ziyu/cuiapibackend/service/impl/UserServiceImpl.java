@@ -43,6 +43,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
      */
     public static final String SALT = "yupi";
 
+    //用户注册
     @Override
     public long userRegister(String userAccount, String userPassword, String checkPassword) {
         // 1. 校验

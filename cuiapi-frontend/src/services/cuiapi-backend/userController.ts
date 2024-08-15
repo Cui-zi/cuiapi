@@ -97,6 +97,7 @@ export async function listUserVoByPageUsingPost(
   });
 }
 
+//向后端发起登录请求
 /** userLogin POST /api/user/login */
 export async function userLoginUsingPost(
   body: API.UserLoginRequest,
@@ -120,6 +121,7 @@ export async function userLogoutUsingPost(options?: { [key: string]: any }) {
   });
 }
 
+//向后端发起注册请求
 /** userRegister POST /api/user/register */
 export async function userRegisterUsingPost(
   body: API.UserRegisterRequest,
