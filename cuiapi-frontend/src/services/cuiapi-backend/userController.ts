@@ -52,21 +52,6 @@ export async function getLoginUserUsingGet(options?: { [key: string]: any }) {
   });
 }
 
-/** getUserVOById GET /api/user/get/vo */
-export async function getUserVoByIdUsingGet(
-  // 叠加生成的Param类型 (非body参数swagger默认没有生成对象)
-  params: API.getUserVOByIdUsingGETParams,
-  options?: { [key: string]: any },
-) {
-  return request<API.BaseResponseUserVO_>('/api/user/get/vo', {
-    method: 'GET',
-    params: {
-      ...params,
-    },
-    ...(options || {}),
-  });
-}
-
 /** listUserByPage POST /api/user/list/page */
 export async function listUserByPageUsingPost(
   body: API.UserQueryRequest,
@@ -82,22 +67,6 @@ export async function listUserByPageUsingPost(
   });
 }
 
-/** listUserVOByPage POST /api/user/list/page/vo */
-export async function listUserVoByPageUsingPost(
-  body: API.UserQueryRequest,
-  options?: { [key: string]: any },
-) {
-  return request<API.BaseResponsePageUserVO_>('/api/user/list/page/vo', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    data: body,
-    ...(options || {}),
-  });
-}
-
-//向后端发起登录请求
 /** userLogin POST /api/user/login */
 export async function userLoginUsingPost(
   body: API.UserLoginRequest,
@@ -121,7 +90,6 @@ export async function userLogoutUsingPost(options?: { [key: string]: any }) {
   });
 }
 
-//向后端发起注册请求
 /** userRegister POST /api/user/register */
 export async function userRegisterUsingPost(
   body: API.UserRegisterRequest,
@@ -143,21 +111,6 @@ export async function updateUserUsingPost(
   options?: { [key: string]: any },
 ) {
   return request<API.BaseResponseBoolean_>('/api/user/update', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    data: body,
-    ...(options || {}),
-  });
-}
-
-/** updateMyUser POST /api/user/update/my */
-export async function updateMyUserUsingPost(
-  body: API.UserUpdateMyRequest,
-  options?: { [key: string]: any },
-) {
-  return request<API.BaseResponseBoolean_>('/api/user/update/my', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
